@@ -1,0 +1,13 @@
+{
+  "name": "DR_ct",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zoeames/DR_ct",
+  "authors": [
+    "Zoe Ames <zoeames@gmail.com>"
+  ],
+  "description": "Digital Reasoning Code Test",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
