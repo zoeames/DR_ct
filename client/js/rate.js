@@ -10,6 +10,8 @@
     return finalRate;
   };
 
-
+  Rate.prototype.updateBase = function(num){
+    this.baseRate = num;
+  };
   $.rateSpace.Rate = Rate;
 })();

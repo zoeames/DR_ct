@@ -7,6 +7,10 @@
     $('#calculate').click(function(){
       $('#finalHourlyRate').html(rate.finalRate());
     });
+    $('#updateRate').click(function(){
+      rate.updateBase($('#baseRate').val());
+      //rate.updateRate(rate);
+    });
 
 
   });
