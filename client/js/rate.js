@@ -17,12 +17,12 @@
 
   Rate.prototype.increaseRate = function(num){
     this.finalAmount += parseFloat(num);
-    console.log(this.finalAmount);
+    //console.log(this.finalAmount);
   };
 
   Rate.prototype.decreaseRate = function(num){
     this.finalAmount -= parseFloat(num);
-    console.log(this.finalAmount);
+    //console.log(this.finalAmount);
   };
 
   $.rateSpace.Rate = Rate;

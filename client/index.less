@@ -21,4 +21,21 @@ body{
   background-color: @TEAL;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 5px 15px;
+  border: 1px solid black;
+}
 
+
+tr:nth-child(even) {
+  background: @YELLOW;
+  margin: -5px;
+}
+tr:nth-child(odd){
+  background: @MAROON;
+}
+
+tr.new{
+  background: @TEAL;
+}

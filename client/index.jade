@@ -18,7 +18,8 @@ html(lang='en')
         .row
           label(for='rule') Add Rule:
           input#ruleText(type='text', name='ruleText')
-          br
+        br
+        .row
           label(for='rule') Price increase/decrease
           select#ruleSign
             option(value='true') +
@@ -35,7 +36,7 @@ html(lang='en')
 
       h3 Rules Entered:
       table#rulesTable
-        tr
+        tr.new
           th Rule Description
           th Sign
           th Amount
@@ -49,5 +50,4 @@ html(lang='en')
   script(src='/js/rateNamespace.js')
   script(src='/js/main.js')
   script(src='/js/rate.js')
-  script(src='/js/rule.js')
 
