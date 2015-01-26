@@ -14,7 +14,7 @@
     });
 
     $('#createRule').click(function(){
-      $('#rulesContainer').append('<p>'+ $('#ruleText').val() + ' at $'+$('#ruleSign option:selected').text() +$('#rule').val() + ' /hour' +'</p>');
+      $('#rulesTable tr:last').after('<tr><td>'+ $('#ruleText').val()+'</td><td>'+$('#ruleSign option:selected').text() +'</td><td>'+ $('#rule').val() + '</td></tr>');
       if($('#ruleSign option:selected').text() === '\+'){
         rate.increaseRate($('#rule').val());
       }
