@@ -7,11 +7,14 @@
     $('#calculate').click(function(){
       $('#finalHourlyRate').html(rate.finalRate());
     });
+
+
     $('#updateRate').click(function(){
       rate.updateBase($('#baseRate').val());
-      //rate.updateRate(rate);
     });
 
-
+    $('#createRule').click(function(){
+      $('#rulesContainer').append('<p>'+ $('#ruleText').val() + ' at $'+$('#ruleSign option:selected').text() +$('#rule').val() + ' /hour' +'</p>');
+    });
   });
 })();
