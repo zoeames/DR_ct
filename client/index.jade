@@ -9,5 +9,25 @@ html(lang='en')
   body
     .container
       h1 Hourly Rate Calculator
-    script(src='/vendor/jquery/dist/jquery.js')
+      form
+        .row
+          label(for='rate') Hourly Base Rate:
+          input#baseRate(type='number', value='200')
+          button#updateRate(type='button') Update Rate
+        .row
+          label(for='rule') Add Rule
+            select#ruleSign
+              option(value='true') +
+              option(value='') -
+            input#rule(type='number', value='0')
+            button#createRule.button-primary(type='button') Create Rule
+        .row
+          button#calculate(type='button') Calculate Final Rate
+      h3 Final Rate:
+      h4 $
+
+      h3 Rules Applied:
+
+
+  script(src='/vendor/jquery/dist/jquery.js')
 
