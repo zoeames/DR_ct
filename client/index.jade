@@ -14,20 +14,30 @@ html(lang='en')
           label(for='rate') Hourly Base Rate:
           input#baseRate(type='number', value='200')
           button#updateRate(type='button') Update Rate
+        br
         .row
-          label(for='rule') Add Rule
-            select#ruleSign
-              option(value='true') +
-              option(value='') -
-            input#rule(type='number', value='0')
-            button#createRule.button-primary(type='button') Create Rule
+          label(for='rule') Add Rule:
+          br
+          label(for='rule') Price increase/decrease
+          select#ruleSign
+            option(value='true') +
+            option(value='') -
+          label(for='rule') $
+          input#rule(type='number', value='0')
+          button#createRule.button-primary(type='button') Create Rule
+        br
         .row
           button#calculate(type='button') Calculate Final Rate
       h3 Final Rate:
       h4 $
+        span#finalHourlyRate
 
       h3 Rules Applied:
 
 
   script(src='/vendor/jquery/dist/jquery.js')
+  script(src='/js/rateNamespace.js')
+  script(src='/js/main.js')
+  script(src='/js/rate.js')
+  script(src='/js/rule.js')
 
