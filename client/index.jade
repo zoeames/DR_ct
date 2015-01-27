@@ -6,41 +6,45 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title Hourly Rate
     link(href='/index.css', rel='stylesheet')
+    link(href='/buttons.css', rel='stylesheet')
   body
-    .container
+    .container1
       h1 Hourly Rate Calculator
       form
         .row
-          label(for='rate') Hourly Base Rate:
-          input#baseRate(type='number', name='baseRate', value='200')
-          button#updateRate(type='button') Update Rate
+          .container2
+            label(for='rate') Hourly Base Rate:
+            input#baseRate(type='number', name='baseRate', value='200')
+            button.btn.orange#updateRate(type='button') Update Rate
         br
         .row
-          label(for='rule') Add Rule:
-          input#ruleText(type='text', name='ruleText')
+          .container3
+            label(for='rule') Add Rule:
+            input#ruleText(type='text', name='ruleText')
+            br
+            label(for='rule') Price increase/decrease
+            select#ruleSign
+              option(value='true') +
+              option(value='') -
+            label(for='rule') $
+            input#rule(type='number', value='0')
+            button.btn.green#createRule.button-primary(type='button') Create Rule
         br
         .row
-          label(for='rule') Price increase/decrease
-          select#ruleSign
-            option(value='true') +
-            option(value='') -
-          label(for='rule') $
-          input#rule(type='number', value='0')
-          button#createRule.button-primary(type='button') Create Rule
+          .container4
+            button.btn.red#calculate(type='button') Calculate Final Rate
+            h1 Final Rate:
+            h2 $
+              span#finalHourlyRate
         br
-        .row
-          button#calculate(type='button') Calculate Final Rate
-      h3 Final Rate:
-      h4 $
-        span#finalHourlyRate
-
-      h3 Rules Entered:
-      table#rulesTable
-        tr.new
-          th Rule Description
-          th Sign
-          th Amount
-          th Apply
+      .container5
+        h3 Rules Entered:
+        table#rulesTable
+          tr.new
+            th Rule Description
+            th Sign
+            th Amount
+            th Apply
 
 
 

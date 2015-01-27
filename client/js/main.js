@@ -27,8 +27,9 @@
     });
 
     $('.applyButton').click(function(){
-      var amount = parseInt(this.value);
-      console.log(amount);
+      var amount = parseInt($(this).val());
+      console.log($(this));
+      return amount;
     });
 
 

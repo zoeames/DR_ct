@@ -1,41 +1,115 @@
-// http://clrs.cc/
-
-@NAVY:    #001F3F;
-@BLUE:    #0074D9;
-@AQUA:    #7FDBFF;
-@TEAL:    #39CCCC;
-@OLIVE:   #3D9970;
-@GREEN:   #2ECC40;
-@LIME:    #01FF70;
-@YELLOW:  #FFDC00;
-@ORANGE:  #FF851B;
-@RED:     #FF4136;
-@MAROON:  #85144B;
-@FUCHSIA: #F012BE;
-@PURPLE:  #B10DC9;
-@BLACK:   #111111;
-@GRAY:    #AAAAAA;
-@SILVER:  #DDDDDD;
+@BLUE:       #4C75D5;
+@DARKBLUE:   #0F3FAF;
+@TEAL:       #39CCCC;
+@LIME:       #40E640;
+@GREEN:      #00CE00;
+@ORANGE:     #FF9A47;
+@DARKORANGE: #FF7400;
+@RED:        #FF4747;
+@DARKRED:    #FF0000;
+@YELLOW:     #FFEA47;
+@DARKYELLOW: #FFE200;
+@BLACK:      #111111;
+@GRAY:       #AAAAAA;
+@SILVER:     #DDDDDD;
 
 body{
   background-color: @TEAL;
 }
 
+h1, h2, h3, h4, h5, h6{
+  text-align: center;
+}
+
+.container1{
+  background-color: @BLUE;
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px @DARKBLUE;
+  text-align: center;
+}
+
+.container2{
+  background-color: @ORANGE;
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px @DARKORANGE;
+  text-align: center;
+}
+
+.container3{
+  background-color: @LIME;
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px @GREEN;
+  text-align: center;
+}
+
+.container4{
+   background-color: @RED;
+   width: 20%;
+   height: auto;
+   padding: 20px;
+   border-radius: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   border: solid 3px @DARKRED;
+  text-align: center;
+ }
+
+.container5{
+  background-color: @YELLOW;
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px @DARKYELLOW;
+  text-align: center;
+}
+
+
+.container1 >label, input, button, select{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+
+label, input{
+  font-size: 150%;
+}
+
+
 table {
+  width: 100%;
   border-collapse: separate;
   border-spacing: 5px 15px;
   border: 1px solid black;
+  text-align: center;
 }
 
 
 tr:nth-child(even) {
-  background: @YELLOW;
-  margin: -5px;
+  color: @GRAY;
 }
 tr:nth-child(odd){
-  background: @MAROON;
+  color: @BLACK;
 }
 
 tr.new{
-  background: @TEAL;
+  background: @YELLOW;
 }
