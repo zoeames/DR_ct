@@ -14,7 +14,7 @@
 
     $('#createRule').click(function(){
       var amount = $('#ruleSign option:selected').text() + $('#rule').val(),
-          htmlString = '<tr><td>'+ $('#ruleText').val()+'</td><td>'+ $('#ruleSign option:selected').text() +'</td><td>'+ $('#rule').val() + '</td><td> <button class="applyButton" name="subject" type="submit" value='+ amount +'>Apply</button></td></tr>';
+          htmlString = '<tr><td>'+ $('#ruleText').val()+'</td><td>'+ $('#ruleSign option:selected').text() +'</td><td>'+ $('#rule').val() + '</td><td> <button class="applyButton" type="submit" value='+ amount +'>Apply</button></td></tr>';
       //console.log(ammount);
       $('#rulesTable tr:last').after(htmlString);
       /*
@@ -26,10 +26,11 @@
       }*/
     });
 
-    $('.applyButton').click(function(){
-      var amount = parseInt($(this).val());
-      console.log($(this));
-      return amount;
+    $('#rulesTable').on('click', '.applyButton', function(){
+      alert('buton clicked!');
+      //var amount = parseInt($(this).val());
+      console.log(this);
+      //return amount;
     });
 
 
