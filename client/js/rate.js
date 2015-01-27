@@ -3,18 +3,22 @@
 
   function Rate(){
     this.baseRate = 200;
-    this.finalAmount = 0;
+    this.finalAmount = 200;
   }
 
   Rate.prototype.finalRate = function(){
     //var finalRate = this.baseRate;
-    this.finalAmount += this.baseRate;
+    this.finalAmount = this.baseRate;
     //console.log('this.finalamount', typeof this.finalAmount, this.finalAmount);
     //return finalAmount;
   };
 
   Rate.prototype.updateBase = function(num){
+    console.log(num);
     this.baseRate = parseInt(num);
+    console.log(this.baseRate);
+    this.finalAmount= this.baseRate;
+    console.log(this.finalAmount);
   };
 
   Rate.prototype.increaseRate = function(num){

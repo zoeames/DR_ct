@@ -4,12 +4,13 @@
   $(document).ready(function(){
     rate  = new $.rateSpace.Rate();
 
+    rate.finalRate();
     $('#finalHourlyRate').html(rate.baseRate);
 
 
     $('#updateRate').click(function(){
       rate.updateBase($('#baseRate').val());
-      $('#finalHourlyRate').html(rate.finalRate());
+      $('#finalHourlyRate').html(rate.finalAmount);
     });
 
     $('#createRule').click(function(){
