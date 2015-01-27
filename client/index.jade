@@ -13,26 +13,28 @@ html(lang='en')
       form
         .row
           .container2
-            label(for='rate') Hourly Base Rate:
+            label(for='rate') Hourly Base Rate: $
             input#baseRate(type='number', name='baseRate', value='200')
             button.btn.orange#updateRate(type='button') Update Rate
         br
         .row
           .container3
             label(for='rule') Add Rule:
-            input#ruleText(type='text', name='ruleText')
+            input#ruleText(type='text', name='ruleText', placeholder='Photoshop')
             br
-            label(for='rule') Price increase/decrease
+            label(for='rule') Cost:
             select#ruleSign
               option(value='true') +
               option(value='') -
             label(for='rule') $
-            input#rule(type='number')
+            input#rule(type='number', placeholder='50')
+            br
+            br
             button.btn.green#createRule.button-primary(type='button') Create Rule
         br
         .row
           .container4
-            h1 Final Rate:
+            h1 Final Hourly Rate:
             h2 $
               span#finalHourlyRate
         br
