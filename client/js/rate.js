@@ -1,34 +1,26 @@
 (function(){
   'use strict';
 
-  function Rate(){
+  function Rate(){                              //constructor
     this.baseRate = 200;
     this.finalAmount = 200;
   }
 
-  Rate.prototype.finalRate = function(){
-    //var finalRate = this.baseRate;
-    this.finalAmount = this.baseRate;
-    //console.log('this.finalamount', typeof this.finalAmount, this.finalAmount);
-    //return finalAmount;
+  Rate.prototype.finalRate = function(){        //finalRate instance method
+    this.finalAmount = this.baseRate;           //sets initial final rate to baseRate before rules applied
   };
 
-  Rate.prototype.updateBase = function(num){
-    console.log(num);
-    this.baseRate = parseInt(num);
-    console.log(this.baseRate);
-    this.finalAmount= this.baseRate;
-    console.log(this.finalAmount);
+  Rate.prototype.updateBase = function(num){    //updateBase instance method
+    this.baseRate = parseInt(num);              //converts form input baseRate to integer
+    this.finalAmount= this.baseRate;            //sets initial final rate to baseRate before rules applied
   };
 
-  Rate.prototype.increaseRate = function(num){
-    this.finalAmount += parseFloat(num);
-    //console.log(this.finalAmount);
+  Rate.prototype.increaseRate = function(num){  //increaseRate instance method
+    this.finalAmount += parseFloat(num);        //checks that increase amount is a floating point and then adds to final amount
   };
 
-  Rate.prototype.decreaseRate = function(num){
-    this.finalAmount -= parseFloat(num);
-    //console.log(this.finalAmount);
+  Rate.prototype.decreaseRate = function(num){  //decreaseRate instance method
+    this.finalAmount -= parseFloat(num);        //checks that decrease amount is a floating point and then subtracts from final amount
   };
 
   $.rateSpace.Rate = Rate;
