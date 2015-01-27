@@ -1,17 +1,10 @@
 {
   "name": "DR_ct",
   "version": "0.0.0",
-  "description": "Digital Reasoning Code Test",
-  "engines": {
-    "node": "0.10.x"
-  },
+  "description": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/zoeames/DR_ct"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "postinstall": "grunt deploy"
   },
   "author": "Zoe Ames <zoeames@gmail.com>",
   "license": "MIT",

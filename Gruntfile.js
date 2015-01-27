@@ -25,6 +25,10 @@ module.exports = function(grunt){
     },
     // ---------------------------------------------------------------------- //
     jade: {
+      options: {
+        pretty: true,
+        doctype: 'html'
+      },
       build: {
         files: [{
           cwd: 'client',
@@ -94,4 +98,3 @@ module.exports = function(grunt){
   grunt.registerTask('build', ['jshint:all', 'jscs', 'jade', 'less', 'copy:js', 'copy:assets', 'copy:favicon']);
   grunt.registerTask('default', ['build', 'watch']);
 };
-
