@@ -21,6 +21,9 @@
 
   Rate.prototype.decreaseRate = function(num){  //decreaseRate instance method
     this.finalAmount -= parseFloat(num);        //checks that decrease amount is a floating point and then subtracts from final amount
+    if(this.finalAmount <0){                    //checks if finalAmount is negative
+      this.finalAmount = 0;                     //if negative assigns finalAmount=0
+    }
   };
 
   $.rateSpace.Rate = Rate;

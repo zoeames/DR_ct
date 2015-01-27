@@ -19,6 +19,8 @@
       var amount = $('#ruleSign option:selected').text() + $('#rule').val(),
           htmlString = '<tr><td>'+ $('#ruleText').val()+'</td><td>'+ $('#ruleSign option:selected').text() +'</td><td>'+ $('#rule').val() + '</td><td> <button class="applyButton btn yellow" type="submit" value='+ amount +'>Apply</button></td></tr>';
       $('#rulesTable tr:last').after(htmlString);                 //pushes new row into bottom of table
+      $('#ruleText').val('');                                     //clear rule description field
+      $('#rule').val('');                                         //clear rule rate field
     });
 
     $('#rulesTable').on('click', '.applyButton', function(){      //function that handles clicking of apply button in rules table
