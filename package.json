@@ -10,7 +10,7 @@
     "url": "https://github.com/zoeames/DR_ct"
   },
   "scripts": {
-    "start": "node server/app.js",
+    "start": "node app.js",
     "postinstall": "grunt deploy",
     "syntax": "grunt build"
   },
